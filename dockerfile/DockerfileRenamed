@@ -20,5 +20,5 @@ EXPOSE 8080 8443
 ENV PATH $PATH:$JAVA_HOME/bin:.
 
 COPY ${PROJECT_ARTIFACT_PATH}/${PROJECT_ARTIFACT_NAME} /opt/app/
+
 ENTRYPOINT ["java", "-server", "-noverify", "-Xmx2048M", "-jar", ${PROJECT_ARTIFACT_NAME}]
- 
